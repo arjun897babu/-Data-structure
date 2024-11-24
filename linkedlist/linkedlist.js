@@ -1,4 +1,4 @@
-class LinkedList {
+export class LinkedList {
   constructor() {
     this.head = null;
   }
@@ -59,7 +59,7 @@ class LinkedList {
   }
 }
 
-class Node {
+export class Node {
   constructor(value) {
     this.value = value;
     this.next = null;
