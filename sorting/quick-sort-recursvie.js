@@ -1,6 +1,5 @@
 function quickSort(arr, low = 0, high = arr.length - 1) {
-    console.log(high)
-  if (low < high) {
+   if (low < high) {
     const pivotIndex = partition(arr, low, high);
     quickSort(arr, low, pivotIndex - 1); // Sort left partition
     quickSort(arr, pivotIndex + 1, high); // Sort right partition

@@ -2,16 +2,16 @@ const arr = [34, 32, 7, 23, 32, 5, 62];
 
 for (let i = 0; i < arr.length; i++) {
   let last = arr.length - i - 1;
-  let minIndex = getMin(arr, i, last); // Find the minimum instead of maximum
-  [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]]; // Swap minimum with current
+  let maxIndex = getMax(arr, i, last); 
+  [arr[i], arr[maxIndex]] = [arr[maxIndex], arr[i]]; 
 }
 
-function getMin(arr, i, last) {
-  let min = i; // Assume the first element of the unsorted part is the smallest
-  for (let j = i; j <= last; j++) {
-    if (arr[min] > arr[j]) min = j; // Update min index if a smaller element is found
+function getMax(arr, i, last) {
+  let max = i; 
+  for (let j = i+1; j <= last; j++) {
+    if (arr[max] > arr[j]) max = j; 
   }
-  return min;
+  return max;
 }
 
 console.log(arr);
